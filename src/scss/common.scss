@@ -1,1 +1,165 @@
 // Заголовки, загальні БЕМ блоки та інше...
+//=== Item-build
+.item-build {
+  padding-inline: toRem(26);
+
+  // .item-build__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  // .item-build__image  
+  &__image {
+    inline-size: toRem(64);
+    flex-basis: toRem(64);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(20);
+    }
+  }
+
+  // .item-build__title
+  &__title {
+    font-size: toRem(18);
+    line-height: 1.444444;
+
+    /* 26/18 */
+    &:not(:last-child) {
+      margin-block-end: toRem(14);
+    }
+  }
+
+  // .item-build__text
+  &__text {
+    font-size: toRem(15);
+    line-height: 1.6;
+    /* 24/15 */
+    color: $textColor;
+  }
+}
+
+//=== Item-partner
+.item-partner {
+  padding-block-start: toRem(42);
+  padding-block-end: toRem(38);
+  padding-inline: toRem(30);
+
+  // .item-partner__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  // .item-partner__image
+  &__image {
+    inline-size: toRem(56);
+    flex-basis: toRem(44);
+    aspect-ratio: 56 / 44;
+    flex-shrink: 0;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(20);
+    }
+  }
+
+  // .item-partner__title
+  &__title {
+    font-size: toRem(17);
+    line-height: 1.529412;
+    /* 26/17 */
+    text-transform: capitalize;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(14);
+    }
+  }
+
+  // .item-partner__text
+  &__text {
+    line-height: 1.5;
+    /* 24/16 */
+    color: $textColor;
+  }
+}
+
+//=== Title
+.title {
+  font-size: toRem(40);
+  line-height: 120%;
+
+  /* 48/40 */
+  span {
+    background-color: #DCE9E2;
+  }
+}
+
+//=== Item-planning
+.item-planning {
+  padding-block-start: toRem(100);
+
+  // .item-planning__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .item-planning__icon
+  &__icon {
+    inline-size: toRem(32);
+    flex-basis: toRem(32);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(20);
+    }
+  }
+
+  // .item-planning__text
+  &__text {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(30);
+    }
+
+    p {
+
+      &:first-child {
+        line-height: 1.5;
+        /* 24/16 */
+      }
+
+      &:last-child {
+        font-size: toRem(15);
+        line-height: 1.6;
+        /* 24/15 */
+        color: $textColor;
+      }
+    }
+  }
+
+  // .item-planning__image-phone  
+  &__image-phone {
+    inline-size: toRem(271);
+    flex-basis: toRem(271);
+    aspect-ratio: 271 / 409;
+    // overflow: hidden;
+  }
+
+  // .item-planning__image  
+  &__image {
+    inline-size: 100%;
+    block-size: 100%;
+    aspect-ratio: 271 / 409;
+    object-fit: cover;
+  }
+}
