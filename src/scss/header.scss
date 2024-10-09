@@ -1,4 +1,7 @@
 .header {
+  @media (max-width:$tablet) {
+    background-color: $bgColor;
+  }
 
   // .header__container-big
   &__container-big {
@@ -7,27 +10,59 @@
     justify-content: space-between;
     column-gap: toRem(40);
     padding-block: toRem(22);
+
+    @media (max-width:$tablet) {
+      display: grid;
+      grid-template-columns: toRem(180) 1fr auto auto;
+      column-gap: toRem(0);
+    }
+
+    @media (max-width: toEm(630)) {
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      column-gap: toRem(0);
+      padding-block: toRem(15);
+    }
+
+    @media (max-width:$mobileSmall) {
+      grid-template-columns: toRem(80) 1fr auto auto;
+    }
   }
 
   // .header__icon
-  &__icon {
-    display: none;
-  }
+  &__icon {}
 
   // .header__logo
-  &__logo {}
+  &__logo {
+    position: relative;
+    z-index: 5;
+
+    @media (max-width:$tablet) {
+      justify-self: center;
+    }
+
+    @media (max-width:$mobileSmall) {
+      display: flex;
+      justify-content: end;
+      max-inline-size: toRem(110);
+      overflow: hidden;
+    }
+  }
 
   // .header__menu
   &__menu {}
 }
 
-.body-navigation {
+
+.navigation-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
   column-gap: toRem(20);
+  position: relative;
+  z-index: 5;
 
-  // .body-navigation__item
+  // .navigation-menu__item
   &__item {
     font-size: toRem(16);
     line-height: 1.5;
@@ -35,17 +70,22 @@
 
     @media (any-hover: hover) {
       &:hover {
-        .body-navigation__link {
+        .navigation-menu__link {
           text-decoration: underline;
         }
       }
     }
   }
 
-  // .body-navigation__link
-  &__link {}
+  // .navigation-menu__link
+  &__link {
 
-  // .body-navigation__login
+    @media (max-width: toEm(630)) {
+      display: none;
+    }
+  }
+
+  // .navigation-menu__login
   &__login {
     font-size: toRem(15);
     line-height: 1.6;
@@ -58,11 +98,20 @@
     background-color: #DCE9E2;
     color: $secondColor;
 
+    @media (max-width:$tablet) {
+      background-color: $secondColor;
+      color: $whiteColor;
+    }
+
     @media (any-hover: hover) {
       &:hover {
         background-color: $secondColor;
         color: $whiteColor;
       }
+    }
+
+    @media (max-width:$mobileSmall) {
+      padding-block: toRem(5);
     }
   }
 }
