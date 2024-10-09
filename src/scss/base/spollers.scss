@@ -3,54 +3,90 @@
 
 // Блок зі спойлерами
 .spollers {
+	flex-basis: toRem(932);
 	display: grid;
-	gap: 15px;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	column-gap: toRem(20);
+	row-gap: toRem(40);
+
+	@media (max-width:$mobile) {
+		grid-template-columns: auto;
+		row-gap: 0;
+	}
+
+	@media (max-width:$mobileSmall) {
+		margin-inline: toRem(-15);
+	}
 }
+
 // Спойлер
 .spollers__item {
-	font-size: toRem(20);
+	font-size: toRem(16);
 }
+
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
-	border-radius: toRem(5);
+	line-height: 1.5;
+	/* 24/16 */
 	position: relative;
 	list-style: none;
+
+	@media (max-width:$mobile) {
+		padding: toRem(10) toRem(10) toRem(10) toRem(10);
+		background-color: $secondColor;
+		color: $whiteColor;
+		border-radius: toRem(6);
+	}
+
+	@media (max-width:$mobileSmall) {
+		border-radius: 0;
+	}
+
+	&:not(:last-child) {
+		margin-block-end: toRem(10);
+	}
+
 	&::marker,
 	&::-webkit-details-marker {
 		display: none;
 	}
+
 	._spoller-init & {
 		cursor: pointer;
+
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
 			right: 10px;
 			top: 50%;
-			background-color: #000;
+			background-color: $whiteColor;
 			height: 2px;
 			width: 15px;
 			transition: transform 0.5s ease 0s;
 		}
+
 		&::before {
 			transform: translate(-75%, -50%) rotate(40deg);
 		}
+
 		&::after {
 			transform: translate(0, -50%) rotate(-40deg);
 		}
+
 		&._spoller-active {
 			&::before {
 				transform: translateX(-75%) rotate(-40deg);
 			}
+
 			&::after {
 				transform: rotate(40deg);
 			}
 		}
+
 		/*
 		._spoller-init & {
 			position: relative;
@@ -86,9 +122,10 @@
 		*/
 	}
 }
+
 // Контент спойлера
 .spollers__body {
-	padding: toRem(20);
-	border-radius: toRem(5);
-	border: 1px solid #eee;
+	@media (max-width:$mobile) {
+		padding: toRem(5) toRem(10) toRem(0) toRem(10);
+	}
 }

@@ -36,7 +36,7 @@ $minWidth: 320;
 // Ширина полотна (макету)
 $maxWidth: 1440;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1338;
+$maxWidthContainer: 1180;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 30;
@@ -111,7 +111,7 @@ body {
 @if ($responsiveType==1) {
 
 	// Чуйна
-	[class*="__container-big"] {
+	[class*="__container"] {
 		@if ($maxWidthContainer>0) {
 			max-width: toRem($containerWidth);
 			margin: 0 auto;
@@ -164,8 +164,8 @@ body {
 	}
 }
 
-[class*="__container"] {
-	max-width: toRem(1180);
+[class*="__container-big"] {
+	max-width: toRem(1338);
 	margin: 0 auto;
 }
 

@@ -23,6 +23,7 @@
 			padding: toRem(70) toRem(15) toRem(15) toRem(30);
 			transition: left 0.3s;
 			background-color: $secondColor;
+			z-index: 2;
 
 			&::before {
 				content: "";
