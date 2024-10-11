@@ -8,7 +8,31 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-
+			<section class="page__hero hero">
+				<div class="hero__container-big">
+					<div class="hero__container">
+						<div class="hero__content">
+							<h1 class="hero__title title title--big">The next generation of care for women and families</h1>
+							<div class="hero__form">
+								<form class="form__search search-form" action="#">
+									<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="I'd like to find out" class="search-form__input input">
+									<button type="submit" class="search-form__button _icon-search"></button>
+								</form>
+								<form class="form" action="https://jkorpela.fi/cgi-bin/echo.cgi">
+									<input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="what Maven will bring to my company" class="form__input input">
+									<button type="submit" class="form__button button">Learn more</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="hero__bg-circle">
+						<img src="@img/hero/vector_hero.png" alt="Image vector bg">
+					</div>
+				</div>
+				<div class="hero__image-main">
+					<img src="@img/hero/image_hero.jpeg" alt="Image happy family">
+				</div>
+			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

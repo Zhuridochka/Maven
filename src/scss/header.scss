@@ -14,7 +14,7 @@
     @media (max-width:$tablet) {
       display: grid;
       grid-template-columns: toRem(180) 1fr auto auto;
-      column-gap: toRem(0);
+      column-gap: toRem(20);
     }
 
     @media (max-width: toEm(630)) {
@@ -34,8 +34,11 @@
 
   // .header__logo
   &__logo {
+    inline-size: toRem(161);
+    block-size: toRem(21);
+    aspect-ratio: 161 / 21;
     position: relative;
-    z-index: 5;
+    z-index: 6;
 
     @media (max-width:$tablet) {
       justify-self: center;
@@ -43,10 +46,15 @@
 
     @media (max-width:$mobileSmall) {
       display: flex;
-      justify-content: end;
       max-inline-size: toRem(110);
       overflow: hidden;
     }
+  }
+
+  // .header__image  
+  &__image {
+    inline-size: 100%;
+    object-fit: contain;
   }
 
   // .header__menu

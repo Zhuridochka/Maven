@@ -98,6 +98,14 @@
   span {
     background-color: #DCE9E2;
   }
+
+  // .title--big    
+  &--big {
+    line-height: 1.155172;
+    /* 67/58 */
+    color: $secondColor;
+    @include adaptiveValue("font-size", 58, 40);
+  }
 }
 
 //=== Item-planning

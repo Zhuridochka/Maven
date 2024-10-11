@@ -3,11 +3,24 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 20px;
+	line-height: 1.5;
+	/* 24/16 */
+	color: $whiteColor;
+	text-align: center;
+	border-radius: toRem(4);
+	background-color: $secondColor;
+	transition: all 0.6s;
+	min-inline-size: toRem(122);
+
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: #026151;
 		}
 	}
+
 	&--fw {
 		width: 100%;
 	}
