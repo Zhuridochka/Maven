@@ -137,7 +137,6 @@
 
 .social-footer {
 
-
   // .social-footer__items
   &__items {
     display: flex;
@@ -258,6 +257,8 @@
 
   // .bottom-footer__link
   &__link {
+    transition: all 0.5s;
+
     &:first-child {
       font-size: toRem(14);
       line-height: 1.714286;
@@ -266,6 +267,7 @@
 
     @media (any-hover: hover) {
       &:hover {
+        color: $secondColor;
         text-decoration: underline;
       }
     }
