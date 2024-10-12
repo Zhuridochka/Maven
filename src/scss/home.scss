@@ -3,6 +3,12 @@
 
   // .page__hero
   &__hero {}
+
+  // .page__build    
+  &__build {}
+
+  // .page__ongoing  
+  &__ongoing {}
 }
 
 //====================================================================================================
@@ -88,7 +94,6 @@
       flex-direction: column;
       row-gap: toRem(15);
     }
-
   }
 
   // .hero__bg-circle
@@ -122,6 +127,187 @@
       block-size: 100%;
       inset-block-start: 0;
       inset-inline-start: 0;
+    }
+  }
+}
+
+//========================================================================================================================================================
+.build {
+
+  // .build__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include adaptiveValue("padding-block-start", 117, 70);
+    @include adaptiveValue("padding-block-end", 75, 30);
+  }
+
+  // .build__title
+  &__title {
+    align-self: center;
+    max-inline-size: toRem(820);
+
+    &:not(:last-child) {
+      margin-block-end: toRem(20);
+    }
+  }
+
+  // .build__text
+  &__text {
+    align-self: center;
+    max-inline-size: toRem(482);
+    line-height: 1.444444;
+    /* 26/18 */
+
+    &:not(:last-child) {
+      margin-block-end: toRem(80);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-block-end: toRem(60);
+      }
+    }
+
+    @media (max-width:$mobileSmall) {
+      &:not(:last-child) {
+        margin-block-end: toRem(40);
+      }
+    }
+
+  }
+
+  // .build__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    column-gap: toRem(60);
+    row-gap: toRem(40);
+  }
+
+  // .build__item
+  &__item {}
+}
+
+//========================================================================================================================================================
+.ongoing {
+
+  // .ongoing__container
+  &__container {
+    @include adaptiveValue("padding-block-start", 104, 50);
+    @include adaptiveValue("padding-block-end", 50, 30);
+  }
+
+  // .ongoing__title
+  &__title {
+    max-inline-size: toRem(465);
+    text-align: center;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(65);
+    }
+
+    @media (max-width:$mobile) {
+      &:not(:last-child) {
+        margin-block-end: toRem(60);
+      }
+    }
+
+    @media (max-width:$mobileSmall) {
+      &:not(:last-child) {
+        margin-block-end: toRem(40);
+      }
+    }
+  }
+
+  // .ongoing__slider
+  &__slider {}
+
+  // .ongoing__wrapper
+  &__wrapper {
+    margin-block-end: toRem(11);
+  }
+
+  // .ongoing__slide
+  &__slide {}
+
+  // .ongoing__item
+  &__item {}
+
+  // .ongoing__paginations
+  &__paginations {
+    position: relative;
+    block-size: toRem(40);
+  }
+
+  &__button-prev,
+  &__button-next {
+    inline-size: toRem(40);
+    flex-basis: toRem(40);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+
+    &::before {
+      font-size: toRem(18);
+      color: $secondColor;
+    }
+  }
+
+  // .ongoing__button-prev
+  &__button-prev {
+    position: absolute;
+    inset-inline-start: 3.8%;
+    inset-block-start: toRem(0);
+    transform: rotate(-90deg);
+
+    @media (max-width:$tablet) {
+      inset-inline-start: 0;
+    }
+  }
+
+  // .ongoing__button-next
+  &__button-next {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    transform: rotate(90deg);
+  }
+
+  &__swiper-scrollbar {
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-inline-end: toRem(46);
+    transform: translate(calc(-50% + toRem(10)), 0);
+    inset-block-start: 50%;
+    inline-size: 87%;
+    block-size: toRem(2);
+    background-color: #DEE3E3;
+    padding: 0 4px;
+
+    @media (max-width: toEm(560)) {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  // .ongoing__swiper-scrollbar
+  &__swiper-scrollbar .swiper-scrollbar-drag {
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: $secondColor;
+
+    &:not(:first-child) {
+      margin: 0 toRem(6);
+    }
+  }
+
+  .swiper-button-disabled {
+
+    &::before {
+      color: #0D8570;
+      opacity: 0.5;
     }
   }
 }
