@@ -56,6 +56,8 @@
   padding-block-end: toRem(38);
   padding-inline: toRem(30);
   background-color: $whiteColor;
+  border-radius: toRem(4);
+  box-shadow: toRem(1) toRem(1) toRem(12) 0 rgba(0, 0, 0, 0.10);
 
   // .item-partner__body
   &__body {
@@ -332,6 +334,95 @@
   &__swiper-pagination {
     @media (max-width:$mobile) {
       font-size: toRem(14);
+    }
+  }
+}
+
+//========================================================================================================================================================
+.review-partners {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  // .review-partners__sub-title
+  &__sub-title {
+    text-transform: uppercase;
+    line-height: 1.4375;
+    /* 23/16 */
+    letter-spacing: toRem(0.8);
+    color: $secondColor;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(23);
+    }
+  }
+
+  // .review-partners__text
+  &__text {
+    font-size: toRem(30);
+    line-height: 1.2;
+    /* 36/30 */
+    max-inline-size: toRem(713);
+
+    @media (max-width:$mobile) {
+      font-size: toRem(27);
+    }
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(22);
+    }
+
+    &:not(:last-child) {
+      margin-block-end: toRem(17);
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-block-end: 15;
+      }
+    }
+  }
+
+  // .review-partners__bottom
+  &__bottom {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    row-gap: toRem(12);
+  }
+
+  // .review-partners__position
+  &__position {
+    text-transform: capitalize;
+    color: $textColor;
+    font-size: toRem(15);
+    line-height: 1.6;
+
+    /* 24/15 */
+    span {
+      text-transform: lowercase;
+    }
+  }
+
+  // .review-partners__case
+  &__case {
+    position: relative;
+    display: block;
+    max-inline-size: toRem(145);
+    line-height: 1.5;
+
+    /* 24/16 */
+    &::after {
+      content: '';
+      position: absolute;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      block-size: toRem(1);
+      inline-size: 100%;
+      background-color: $mainColor;
+
     }
   }
 }
