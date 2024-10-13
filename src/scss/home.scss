@@ -17,7 +17,17 @@
   &__planning {}
 
   // .page__partners    
-  &__partners {}
+  &__partners {
+    margin-block-end: toRem(24);
+  }
+
+  // .page__magazines    
+  &__magazines {}
+
+  // .page__awards  
+  &__awards {
+    margin-block-end: toRem(100);
+  }
 }
 
 //====================================================================================================
@@ -140,7 +150,7 @@
   }
 }
 
-//========================================================================================================================================================
+//========================================================================================================================================
 .build {
 
   // .build__container
@@ -199,7 +209,7 @@
   &__item {}
 }
 
-//========================================================================================================================================================
+//========================================================================================================================================
 .ongoing {
 
   // .ongoing__container
@@ -322,7 +332,7 @@
   }
 }
 
-//========================================================================================================================================================
+//========================================================================================================================================
 .healthcare {
 
   // .healthcare__container
@@ -461,7 +471,7 @@
   }
 }
 
-//========================================================================================================================================================
+//========================================================================================================================================
 .planning {
 
   // .planning__container
@@ -522,7 +532,7 @@
   &__item {}
 }
 
-//========================================================================================================================================================
+//========================================================================================================================================
 .partners {
   background-color: $bgColor;
 
@@ -564,7 +574,6 @@
     flex-basis: toRem(500);
     aspect-ratio: 500 / 275;
     flex-shrink: 0;
-    background-color: $whiteColor;
 
     img {
       inline-size: 100%;
@@ -760,5 +769,119 @@
 
   @media (max-width:$mobile) {
     display: none;
+  }
+}
+
+//========================================================================================================================================
+.magazines {
+  background-color: rgba(241, 247, 246, 0.50);
+
+  // .magazines__container
+  &__container {
+    padding-block-start: toRem(46);
+    padding-block-end: toRem(70);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  // .magazines__sub-title
+  &__sub-title {
+    line-height: 1.4375;
+    /* 23/16 */
+    letter-spacing: toRem(0.8);
+    color: $textColor;
+    margin-block-end: toRem(10);
+    text-transform: uppercase;
+  }
+
+  // .magazines__list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(35);
+    row-gap: toRem(5);
+    flex-wrap: wrap;
+
+    @media (max-width: toEm(700)) {
+      justify-content: center;
+    }
+  }
+
+  // .magazines__item
+  &__item {
+    inline-size: toRem(200);
+    flex-basis: toRem(200);
+    aspect-ratio: 200 / 90;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width:$mobileSmall) {
+      flex-shrink: 1;
+    }
+  }
+
+  // .magazines__image
+  &__image {
+    inline-size: 100%;
+    object-fit: cover;
+  }
+}
+
+//========================================================================================================================================
+.awards {
+
+  // .awards__container
+  &__container {
+    max-inline-size: toRem(1240);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(40);
+  }
+
+  // .awards__sub-title
+  &__sub-title {
+    align-self: center;
+    line-height: 1.4375;
+    /* 23/16 */
+    letter-spacing: toRem(0.8);
+    color: $textColor;
+    text-transform: uppercase;
+  }
+
+  // .awards__list
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    column-gap: toRem(20);
+    row-gap: toRem(50);
+    flex-wrap: wrap;
+
+    @media (max-width: toEm(700)) {
+      justify-content: center;
+    }
+  }
+
+  // .awards__item
+  &__item {
+    inline-size: toRem(200);
+    flex-basis: toRem(200);
+    aspect-ratio: 200 / 80;
+    flex-shrink: 0;
+
+    @media (max-width: toEm(500)) {
+      inline-size: toRem(150);
+      flex-basis: toRem(150);
+      flex-shrink: 1;
+    }
+  }
+
+  // .awards__image
+  &__image {
+    inline-size: 100%;
+    object-fit: cover;
   }
 }
