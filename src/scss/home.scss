@@ -24,10 +24,16 @@
   // .page__magazines    
   &__magazines {}
 
+  // .page__foundation  
+  &__foundation {
+    margin-block-end: toRem(80);
+  }
+
   // .page__awards  
   &__awards {
     margin-block-end: toRem(100);
   }
+
 }
 
 //====================================================================================================
@@ -831,6 +837,121 @@
 }
 
 //========================================================================================================================================
+.foundation {
+
+  // .foundation__container
+  &__container {
+    position: relative;
+    padding-block-start: toRem(100);
+
+    @media (max-width:$mobile) {
+      padding-block-start: toRem(30);
+    }
+  }
+
+  // .foundation__body
+  &__body {
+    display: flex;
+    column-gap: toRem(40);
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
+      flex-direction: column-reverse;
+      row-gap: toRem(40);
+    }
+  }
+
+  // .foundation__vector  
+  &__vector {
+    position: absolute;
+    inset-block-start: percent(70, 600);
+    inset-inline-start: toRem(15);
+    inline-size: percent(443, 1180);
+    block-size: percent(423, 600);
+    aspect-ratio: 443 / 423;
+
+    @media (max-width:$mobile) {
+      display: none;
+    }
+
+    img {
+      inline-size: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .foundation__picture
+  &__picture {
+    inline-size: toRem(590);
+    flex-basis: toRem(590);
+    aspect-ratio: 590 / 500;
+
+    @media (max-width:$mobile) {
+      inline-size: 100%;
+      flex-basis: 100%;
+    }
+  }
+
+  // .foundation__image
+  &__image {
+    inline-size: 100%;
+    aspect-ratio: 590 / 500;
+    object-fit: cover;
+  }
+
+  // .foundation__content
+  &__content {
+    inline-size: toRem(500);
+    flex-basis: toRem(500);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+
+    @media (max-width:$mobile) {
+      inline-size: 100%;
+      flex-basis: 100%;
+      aspect-ratio: auto;
+    }
+  }
+
+  // .foundation__inner  
+  &__inner {
+    align-self: center;
+    max-inline-size: toRem(472);
+
+    @media (max-width:$mobile) {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  // .foundation__title
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: toRem(24);
+    }
+  }
+
+  // .foundation__text
+  &__text {
+    @extend %text-template;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(15);
+      line-height: 1.3;
+    }
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(14);
+      line-height: 1.4;
+    }
+  }
+}
+
+//========================================================================================================================================
 .awards {
 
   // .awards__container
@@ -873,8 +994,8 @@
     flex-shrink: 0;
 
     @media (max-width: toEm(500)) {
-      inline-size: toRem(150);
-      flex-basis: toRem(150);
+      inline-size: toRem(120);
+      flex-basis: toRem(120);
       flex-shrink: 1;
     }
   }
