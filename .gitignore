@@ -3,7 +3,6 @@ package-lock.json/
 flsStartTemplate/
 node_modules/
 version.json/
-dist/
 Source/
 undefined/
 **/*.zip
