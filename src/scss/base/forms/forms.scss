@@ -1,30 +1,6 @@
 //<FORM>
 // Сніппет (HTML):
 .form {
-	max-inline-size: toRem(583);
-	background-color: $whiteColor;
-	border-radius: toRem(2);
-	box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.10);
-	padding-block: toRem(18);
-	padding-inline: toRem(30);
-	display: flex;
-	align-items: center;
-	gap: toRem(5);
-
-	@media (max-width:$mobile) {
-		max-inline-size: 100%;
-		padding-block: toRem(10);
-	}
-
-	@media (max-width: toEm(560)) {
-		padding-inline: toRem(10);
-	}
-
-	@media (max-width: toEm(510)) {
-		flex-direction: column;
-		row-gap: toRem(10);
-		padding-inline: toRem(10);
-	}
 
 	&__row {}
 
@@ -32,36 +8,129 @@
 
 	&__line {}
 
-	&__input {
-		inline-size: toRem(270);
-		flex: 1 1 toRem(270);
-		font-size: toRem(15);
-		line-height: 1.6;
-		/* 24/15 */
-		color: $textColor;
-		padding-block: toRem(12);
-		padding-inline: toRem(10);
+	&__input {}
 
-		@media (max-width: toEm(510)) {
-			padding-block: toRem(10);
-			flex: 100%;
-		}
-	}
-
-	&__button {
-		@media (max-width: toEm(510)) {
-			inline-size: 100%;
-			text-align: center;
-		}
-	}
+	&__button {}
 
 	&__error {}
 
-	// .form__search		
-	&__search {}
+	&--srch {
+		inline-size: toRem(261);
+		flex-grow: 0;
+		flex-shrink: 1;
+		background-color: $whiteColor;
+		border-radius: toRem(2);
+		box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.10);
+		padding-block: toRem(18);
+		padding-inline-start: toRem(30);
+		padding-inline-end: toRem(40);
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		gap: toRem(12);
 
-	// .form__started
-	&__started {}
+		&__input {
+			inline-size: toRem(121);
+			flex: 1 1 toRem(121);
+			font-size: toRem(16);
+			line-height: 1.5;
+			/* 24/16 */
+			color: $mainColor;
+			padding-block: toRem(12);
+			padding-inline: toRem(10);
+		}
+
+		@media (max-width:$tablet) {
+			width: toRem(583);
+			flex-basis: toRem(583);
+			flex-shrink: 1;
+			max-block-size: toRem(80);
+		}
+
+		@media (max-width:$mobile) {
+			inline-size: 100%;
+			padding-block: toRem(10);
+			max-block-size: toRem(68);
+		}
+
+		@media (max-width: toEm(560)) {
+			padding-inline-start: toRem(20);
+		}
+
+		&__button {}
+	}
+
+	&--cmp {
+		max-inline-size: toRem(583);
+		background-color: $whiteColor;
+		border-radius: toRem(2);
+		box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.10);
+		padding-block: toRem(18);
+		padding-inline: toRem(30);
+		display: flex;
+		align-items: center;
+		gap: toRem(5);
+
+		@media (max-width:$mobile) {
+			max-inline-size: 100%;
+			padding-block: toRem(10);
+		}
+
+		@media (max-width: toEm(560)) {
+			padding-inline: toRem(10);
+		}
+
+		@media (max-width: toEm(510)) {
+			flex-direction: column;
+			row-gap: toRem(10);
+			padding-inline: toRem(10);
+		}
+
+		&__input {
+			inline-size: toRem(270);
+			flex: 1 1 toRem(270);
+			font-size: toRem(15);
+			line-height: 1.6;
+			/* 24/15 */
+			color: $textColor;
+			padding-block: toRem(12);
+			padding-inline: toRem(10);
+
+			@media (max-width: toEm(510)) {
+				padding-block: toRem(10);
+				flex: 100%;
+			}
+		}
+
+		&__button {
+			@media (max-width: toEm(510)) {
+				inline-size: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+	&--str {
+		display: flex;
+		flex-direction: column;
+		row-gap: toRem(12);
+
+		&__input {
+			border: toRem(4);
+			border: toRem(1) solid #DEE3E3;
+			padding-block: toRem(18.5);
+			padding-inline-start: toRem(21);
+			padding-inline-end: toRem(15);
+			font-size: toRem(15);
+			line-height: 1.6;
+			/* 24/15 */
+			inline-size: 100%;
+		}
+
+		&__button {
+			inline-size: 100%;
+		}
+	}
 }
 
 //</FORM>

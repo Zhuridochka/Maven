@@ -164,55 +164,7 @@
   }
 }
 
-.search-form {
-  inline-size: toRem(261);
-  flex-grow: 0;
-  flex-shrink: 1;
-  background-color: $whiteColor;
-  border-radius: toRem(2);
-  box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.10);
-  padding-block: toRem(18);
-  padding-inline-start: toRem(30);
-  padding-inline-end: toRem(40);
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: toRem(12);
-
-  // .search-form__input
-  &__input {
-    inline-size: toRem(121);
-    flex: 1 1 toRem(121);
-    font-size: toRem(16);
-    line-height: 1.5;
-    /* 24/16 */
-    color: $mainColor;
-    padding-block: toRem(12);
-    padding-inline: toRem(10);
-  }
-
-  @media (max-width:$tablet) {
-    width: toRem(583);
-    flex-basis: toRem(583);
-    flex-shrink: 1;
-    max-block-size: toRem(80);
-  }
-
-  @media (max-width:$mobile) {
-    inline-size: 100%;
-    padding-block: toRem(10);
-    max-block-size: toRem(68);
-  }
-
-  @media (max-width: toEm(560)) {
-    padding-inline-start: toRem(20);
-  }
-
-  // .search-form__button
-  &__button {}
-}
-
-//========================================================================================================================================
+//========================================================================================================================
 .build {
 
   // .build__container
@@ -293,7 +245,7 @@
   }
 }
 
-//========================================================================================================================================
+//========================================================================================================================
 .ongoing {
 
   // .ongoing__container
@@ -424,7 +376,7 @@
   }
 }
 
-//========================================================================================================================================
+//========================================================================================================================
 .healthcare {
 
   // .healthcare__container
@@ -452,6 +404,7 @@
   @media (max-width:$mobile) {
     flex-wrap: wrap;
     row-gap: toRem(20);
+    justify-content: center;
   }
 
   // .main-healthcare__content
@@ -463,11 +416,13 @@
     @media (max-width:$mobile) {
       padding-block-start: toRem(5);
       padding-block-end: toRem(40);
+      text-align: center;
     }
   }
 
   // .main-healthcare__title
   &__title {
+
     &:not(:last-child) {
       margin-block-end: toRem(20);
     }
@@ -563,7 +518,7 @@
   }
 }
 
-//========================================================================================================================================
+//========================================================================================================================
 .planning {
 
   // .planning__container
@@ -1239,28 +1194,4 @@
 
   // .started__form
   &__form {}
-}
-
-.started-form {
-  display: flex;
-  flex-direction: column;
-
-  // .started-form__input
-  &__input {
-    margin-block-end: toRem(12);
-    border: toRem(4);
-    border: toRem(1) solid #DEE3E3;
-    padding-block: toRem(18.5);
-    padding-inline-start: toRem(21);
-    padding-inline-end: toRem(15);
-    font-size: toRem(15);
-    line-height: 1.6;
-    /* 24/15 */
-    inline-size: 100%;
-  }
-
-  // .started-form__button
-  &__button {
-    inline-size: 100%;
-  }
 }
