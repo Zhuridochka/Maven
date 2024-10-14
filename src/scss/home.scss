@@ -130,7 +130,13 @@
     position: absolute;
     inset-block-start: percent(13, 627);
     inset-inline-end: percent(12, 1338);
-    color: $mainColor;
+    aspect-ratio: 621 / 579;
+
+    img {
+      inline-size: 100%;
+      aspect-ratio: 621 / 579;
+      object-fit: cover;
+    }
   }
 
   // .hero__image-main
@@ -261,10 +267,32 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     column-gap: toRem(60);
     row-gap: toRem(40);
+
+    &._watcher-view {
+      .build__item {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
   }
 
   // .build__item
-  &__item {}
+  &__item {
+    transform: translate(0, 150%);
+    opacity: 0;
+
+    &:first-child {
+      transition: all 1s;
+    }
+
+    &:nth-child(2) {
+      transition: all 1.5s;
+    }
+
+    &:last-child {
+      transition: all 2s;
+    }
+  }
 }
 
 //========================================================================================================================================
@@ -592,10 +620,36 @@
     flex-wrap: wrap;
     column-gap: toRem(23);
     row-gap: toRem(30);
+
+    &._watcher-view {
+      .planning__item {
+        transform: scale(1);
+        opacity: 1;
+
+        &:first-child {
+          transition: all 1s;
+        }
+
+        &:nth-child(2) {
+          transition: all 1.5s;
+        }
+
+        &:nth-child(3) {
+          transition: all 2s;
+        }
+
+        &:last-child {
+          transition: all 2.5s;
+        }
+      }
+    }
   }
 
   // .planning__item
-  &__item {}
+  &__item {
+    transform: scale(0);
+    opacity: 0;
+  }
 }
 
 //========================================================================================================================================
@@ -704,10 +758,32 @@
 
     column-gap: toRem(50);
     row-gap: toRem(30);
+
+    &._watcher-view {
+      .top-partners__item {
+        transform: scale(1);
+        opacity: 1;
+
+        &:first-child {
+          transition: all 1s;
+        }
+
+        &:nth-child(2) {
+          transition: all 1.5s;
+        }
+
+        &:last-child {
+          transition: all 2s;
+        }
+      }
+    }
   }
 
   // .top-partners__item
-  &__item {}
+  &__item {
+    transform: translateY(300%);
+    opacity: 0;
+  }
 }
 
 .middle-partners {
@@ -809,9 +885,17 @@
 
   // .images-partners__item
   &__item {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 3s;
     position: absolute;
     inline-size: percent(252, 1338);
     block-size: percent(240, 1323);
+
+    &._watcher-view {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 
   // .images-partners__item_1
@@ -946,7 +1030,7 @@
   // .foundation__vector  
   &__vector {
     position: absolute;
-    inset-block-start: percent(70, 600);
+    inset-block-start: percent(30, 600);
     inset-inline-start: toRem(15);
     inline-size: percent(443, 1180);
     block-size: percent(423, 600);
