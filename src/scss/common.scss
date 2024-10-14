@@ -118,6 +118,14 @@
     color: $secondColor;
     @include adaptiveValue("font-size", 58, 40);
   }
+
+  // .title--39    
+  &--39 {
+    font-size: toRem(39);
+    line-height: 1.230769;
+    /* 48/39 */
+    @include adaptiveValue("font-size", 39, 30);
+  }
 }
 
 //=== Item-planning

@@ -59,54 +59,9 @@
 
 	// .form__search		
 	&__search {}
-}
 
-.search-form {
-	inline-size: toRem(261);
-	flex-grow: 0;
-	flex-shrink: 1;
-	background-color: $whiteColor;
-	border-radius: toRem(2);
-	box-shadow: 1px 1px 12px 0px rgba(0, 0, 0, 0.10);
-	padding-block: toRem(18);
-	padding-inline-start: toRem(30);
-	padding-inline-end: toRem(40);
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	gap: toRem(12);
-
-	// .search-form__input
-	&__input {
-		inline-size: toRem(121);
-		flex: 1 1 toRem(121);
-		font-size: toRem(16);
-		line-height: 1.5;
-		/* 24/16 */
-		color: $mainColor;
-		padding-block: toRem(12);
-		padding-inline: toRem(10);
-	}
-
-	@media (max-width:$tablet) {
-		width: toRem(583);
-		flex-basis: toRem(583);
-		flex-shrink: 1;
-		max-block-size: toRem(80);
-	}
-
-	@media (max-width:$mobile) {
-		inline-size: 100%;
-		padding-block: toRem(10);
-		max-block-size: toRem(68);
-	}
-
-	@media (max-width: toEm(560)) {
-		padding-inline-start: toRem(20);
-	}
-
-	// .search-form__button
-	&__button {}
+	// .form__started
+	&__started {}
 }
 
 //</FORM>
@@ -117,7 +72,7 @@
 
 // <INPUTS>
 // Сніппет (HTML): inp
-// @import "input";
+//@import "input";
 
 // <CHECK>
 // Сніппет (HTML): chk

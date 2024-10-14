@@ -21,6 +21,10 @@
 		}
 	}
 
+	&--high {
+		padding-block: toRem(18);
+	}
+
 	&--fw {
 		width: 100%;
 	}
