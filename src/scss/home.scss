@@ -17,9 +17,7 @@
   &__planning {}
 
   // .page__partners    
-  &__partners {
-    margin-block-end: toRem(24);
-  }
+  &__partners {}
 
   // .page__magazines    
   &__magazines {}
@@ -933,7 +931,7 @@
 
   // .magazines__container
   &__container {
-    padding-block-start: toRem(46);
+    padding-block-start: toRem(70);
     padding-block-end: toRem(70);
     display: flex;
     align-items: center;
