@@ -874,16 +874,22 @@
     text-transform: uppercase;
   }
 
-  // .magazines__list
+
+  // .magazines__body  
+  &__body {
+    overflow: hidden;
+  }
+
+  // .magazines__list //*Застосовувати ці стилі, якщо біжучий рядок не потрібен
   &__list {
-    display: flex;
-    justify-content: space-between;
-    column-gap: toRem(35);
-    row-gap: toRem(5);
-    flex-wrap: wrap;
+    // display: flex;
+    // justify-content: space-between;
+    // column-gap: toRem(35);
+    // row-gap: toRem(5);
+    // flex-wrap: wrap;
 
     @media (max-width: toEm(700)) {
-      justify-content: center;
+      // justify-content: center;
     }
   }
 
@@ -1046,16 +1052,16 @@
     text-transform: uppercase;
   }
 
-  // .awards__list
+  // .awards__list //*Застосовувати ці стилі, якщо біжучий рядок не потрібен
   &__list {
-    display: flex;
-    justify-content: space-around;
-    column-gap: toRem(20);
-    row-gap: toRem(50);
-    flex-wrap: wrap;
+    // display: flex;
+    // justify-content: space-around;
+    // column-gap: toRem(20);
+    // row-gap: toRem(50);
+    // flex-wrap: wrap;
 
     @media (max-width: toEm(700)) {
-      justify-content: center;
+      // justify-content: center;
     }
   }
 
