@@ -298,6 +298,7 @@ function windowLoaded() {
   //* Функція для визначення висоти у header і встановлення висоти для &:before .menu__body
   function updateHeightMenuBodyBefore() {
     const header = document.querySelector(".header");
+    if (!header) return;
     const headerHeight = header.offsetHeight;
     document.documentElement.style.setProperty(
       "--header-height",
