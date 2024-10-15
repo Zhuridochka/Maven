@@ -8,7 +8,7 @@ const isTouchScreen = window.matchMedia("(any-hover:none)").matches;
 window.addEventListener("load", windowLoaded);
 
 function windowLoaded() {
-  // Marque (біжучий рядок)
+  //* Marque (біжучий рядок)
   function marquee() {
     const $marqueeArray = document.querySelectorAll("[data-marquee]");
     const CLASS_NAMES = {
@@ -293,7 +293,20 @@ function windowLoaded() {
     });
   }
 
-  marquee();
+  // marquee();
+
+  //* Функція для визначення висоти у header і встановлення висоти для &:before .menu__body
+  function updateHeightMenuBodyBefore() {
+    const header = document.querySelector(".header");
+    const headerHeight = header.offsetHeight;
+    document.documentElement.style.setProperty(
+      "--header-height",
+      `${headerHeight}px`
+    );
+  }
+
+  updateHeightMenuBodyBefore();
+
   // document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);
 }

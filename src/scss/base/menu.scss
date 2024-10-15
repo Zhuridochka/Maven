@@ -20,7 +20,7 @@
 			left: -100%;
 			top: 0;
 			overflow: auto;
-			padding: toRem(74) toRem(15) toRem(15) toRem(30);
+			padding: calc(var(--header-height) + toRem(20)) toRem(15) toRem(15) toRem(30);
 			transition: left 0.3s;
 			background-color: $secondColor;
 			z-index: 5;
@@ -29,7 +29,7 @@
 				content: "";
 				position: fixed;
 				width: 100%;
-				height: toRem(64);
+				height: var(--header-height);
 				left: -100%;
 				top: 0;
 				transition: left 0.3s;

@@ -1,5 +1,6 @@
 //====================================================================================================
 .page {
+  padding-block-start: var(--header-height);
 
   // .page__hero
   &__hero {}
@@ -222,6 +223,18 @@
       .build__item {
         transform: translate(0, 0);
         opacity: 1;
+
+        &:first-child {
+          transition: all 1s;
+        }
+
+        &:nth-child(2) {
+          transition: all 1.5s;
+        }
+
+        &:last-child {
+          transition: all 2s;
+        }
       }
     }
   }
@@ -230,18 +243,6 @@
   &__item {
     transform: translate(0, 150%);
     opacity: 0;
-
-    &:first-child {
-      transition: all 1s;
-    }
-
-    &:nth-child(2) {
-      transition: all 1.5s;
-    }
-
-    &:last-child {
-      transition: all 2s;
-    }
   }
 }
 
@@ -911,7 +912,6 @@
     text-transform: uppercase;
   }
 
-
   // .magazines__body  
   &__body {
     overflow: hidden;
@@ -919,14 +919,14 @@
 
   // .magazines__list //*Застосовувати ці стилі, якщо біжучий рядок не потрібен
   &__list {
-    // display: flex;
-    // justify-content: space-between;
-    // column-gap: toRem(35);
-    // row-gap: toRem(5);
-    // flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(35);
+    row-gap: toRem(5);
+    flex-wrap: wrap;
 
-    @media (max-width: toEm(700)) {
-      // justify-content: center;
+    @media (max-width: toEm(1186)) {
+      justify-content: center;
     }
   }
 
@@ -1091,14 +1091,14 @@
 
   // .awards__list //*Застосовувати ці стилі, якщо біжучий рядок не потрібен
   &__list {
-    // display: flex;
-    // justify-content: space-around;
-    // column-gap: toRem(20);
-    // row-gap: toRem(50);
-    // flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    column-gap: toRem(20);
+    row-gap: toRem(50);
+    flex-wrap: wrap;
 
     @media (max-width: toEm(700)) {
-      // justify-content: center;
+      justify-content: center;
     }
   }
 

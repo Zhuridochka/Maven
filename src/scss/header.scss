@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  inline-size: 100%;
+  z-index: 99;
+  background-color: $whiteColor;
+
   @media (max-width:$tablet) {
     background-color: $bgColor;
   }
@@ -60,7 +65,6 @@
   // .header__menu
   &__menu {}
 }
-
 
 .navigation-menu {
   display: flex;
