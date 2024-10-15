@@ -293,7 +293,7 @@ function windowLoaded() {
     });
   }
 
-  // marquee();
+  marquee();
 
   //* Функція для визначення висоти у header і встановлення висоти для &:before .menu__body
   function updateHeightMenuBodyBefore() {
