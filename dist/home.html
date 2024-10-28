@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"HomePage"
-})
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20241028115524">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container-big">
+				<button type="button" class="header__icon icon-menu"><span></span></button>
+				<a href="#" class="header__logo">
+					<img class="header__image" src="img/logo.svg" alt="Logo">
+				</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#" class="menu__link">Employers</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Health Plans</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Consultants</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Resources</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Demo request</a>
+							</li>
+						</ul>
+					</nav>
+					<div data-da=".header__container-big,992,3" class="menu__navigation navigation-menu">
+						<div class="navigation-menu__item">
+							<a href="#" class="navigation-menu__link">Individuals</a>
+						</div>
+						<button type="button" class="navigation-menu__login">Login</button>
+					</div>
+				</div>
+			</div>
+		</header>
 		<main class="page">
 			<section data-prlx-parent class="page__hero hero">
 				<div class="hero__container-big">
@@ -26,11 +68,11 @@
 						</div>
 					</div>
 					<div class="hero__bg-circle">
-						<img data-prlx src="@img/hero/vector_hero.png" alt="Image vector bg">
+						<img data-prlx src="img/hero/vector_hero.webp" alt="Image vector bg">
 					</div>
 				</div>
 				<div class="hero__image-main">
-					<img src="@img/hero/image_hero.jpeg" alt="Image happy family">
+					<img src="img/hero/image_hero.webp" alt="Image happy family">
 				</div>
 			</section>
 			<section class="page__build build">
@@ -44,7 +86,7 @@
 					<div data-watch data-watch-threshold="0.2" data-watch-once class="build__items">
 						<div class="build__item item-build">
 							<a href="#" class="item-build__body">
-								<div class="item-build__icon"><img class="item-build__image" src="@img/build/image_01.png" alt="Image 01">
+								<div class="item-build__icon"><img class="item-build__image" src="img/build/image_01.webp" alt="Image 01">
 								</div>
 								<h5 class="item-build__title">Whole-person care</h5>
 								<div class="item-build__text">
@@ -57,7 +99,7 @@
 						<div class="build__item item-build">
 							<a href="#" class="item-build__body">
 								<div class="item-build__icon">
-									<img class="item-build__image" src="@img/build/image_02.png" alt="Image 02">
+									<img class="item-build__image" src="img/build/image_02.webp" alt="Image 02">
 								</div>
 								<h5 class="item-build__title">Exceptional outcomes</h5>
 								<div class="item-build__text">
@@ -70,7 +112,7 @@
 						<div class="build__item item-build">
 							<a href="#" class="item-build__body">
 								<div class="item-build__icon">
-									<img class="item-build__image" src="@img/build/image_03.png" alt="Image 03">
+									<img class="item-build__image" src="img/build/image_03.webp" alt="Image 03">
 								</div>
 								<h5 class="item-build__title">Lower costs</h5>
 								<div class="item-build__text">
@@ -92,7 +134,7 @@
 								<div class="ongoing__item item-ongoing">
 									<div class="item-ongoing__wrapper">
 										<div class="item-ongoing__picture">
-											<img src="@img/ongoing/image_01.jpg" alt="Photo of a pregnant woman">
+											<img src="img/ongoing/image_01.webp" alt="Photo of a pregnant woman">
 										</div>
 										<a href="#" class="item-ongoing__card card-item-ongoing">
 											<div class="card-item-ongoing__inner">
@@ -112,7 +154,7 @@
 								<div class="ongoing__item item-ongoing">
 									<div class="item-ongoing__wrapper">
 										<div class="item-ongoing__picture">
-											<img src="@img/ongoing/image_01.jpg" alt="Photo of a pregnant woman">
+											<img src="img/ongoing/image_01.webp" alt="Photo of a pregnant woman">
 										</div>
 										<a href="#" class="item-ongoing__card card-item-ongoing">
 											<div class="card-item-ongoing__inner">
@@ -130,7 +172,7 @@
 								<div class="ongoing__item item-ongoing">
 									<div class="item-ongoing__wrapper">
 										<div class="item-ongoing__picture">
-											<img src="@img/ongoing/image_01.jpg" alt="Photo of a pregnant woman">
+											<img src="img/ongoing/image_01.webp" alt="Photo of a pregnant woman">
 										</div>
 										<a href="#" class="item-ongoing__card card-item-ongoing">
 											<div class="card-item-ongoing__inner">
@@ -148,7 +190,7 @@
 								<div class="ongoing__item item-ongoing">
 									<div class="item-ongoing__wrapper">
 										<div class="item-ongoing__picture">
-											<img src="@img/ongoing/image_01.jpg" alt="Photo of a pregnant woman">
+											<img src="img/ongoing/image_01.webp" alt="Photo of a pregnant woman">
 										</div>
 										<a href="#" class="item-ongoing__card card-item-ongoing">
 											<div class="card-item-ongoing__inner">
@@ -166,7 +208,7 @@
 								<div class="ongoing__item item-ongoing">
 									<div class="item-ongoing__wrapper">
 										<div class="item-ongoing__picture">
-											<img src="@img/ongoing/image_01.jpg" alt="Photo of a pregnant woman">
+											<img src="img/ongoing/image_01.webp" alt="Photo of a pregnant woman">
 										</div>
 										<a href="#" class="item-ongoing__card card-item-ongoing">
 											<div class="card-item-ongoing__inner">
@@ -201,7 +243,7 @@
 							</div>
 						</div>
 						<div class="main-healthcare__picture">
-							<img class="main-healthcare__image" src="@img/healthcare/image.png" alt="Image big family">
+							<img class="main-healthcare__image" src="img/healthcare/image.webp" alt="Image big family">
 						</div>
 					</div>
 					<div class="healthcare__bottom bottom-healthcare">
@@ -243,49 +285,49 @@
 					<div data-watch data-watch-threshold="0.2" data-watch-once class="planning__items">
 						<div class="planning__item item-planning">
 							<div class="item-planning__wrapper">
-								<img class="item-planning__icon" src="@img/planning/icons/icon_01.svg" alt="Icon logo">
+								<img class="item-planning__icon" src="img/planning/icons/icon_01.svg" alt="Icon logo">
 								<div class="item-planning__text">
 									<p>A dedicated Care Advocate</p>
 									<p>for every member</p>
 								</div>
 								<div class="item-planning__image-phone">
-									<img class="item-planning__image" src="@img/planning/phone_01.png" alt="Image phone_01">
+									<img class="item-planning__image" src="img/planning/phone_01.webp" alt="Image phone_01">
 								</div>
 							</div>
 						</div>
 						<div class="planning__item item-planning">
 							<div class="item-planning__wrapper">
-								<img class="item-planning__icon" src="@img/planning/icons/icon_02.svg" alt="Icon chat">
+								<img class="item-planning__icon" src="img/planning/icons/icon_02.svg" alt="Icon chat">
 								<div class="item-planning__text">
 									<p>A dedicated Care Advocate</p>
 									<p>for every member</p>
 								</div>
 								<div class="item-planning__image-phone">
-									<img class="item-planning__image" src="@img/planning/phone_02.png" alt="Image phone_02">
+									<img class="item-planning__image" src="img/planning/phone_02.webp" alt="Image phone_02">
 								</div>
 							</div>
 						</div>
 						<div class="planning__item item-planning">
 							<div class="item-planning__wrapper">
-								<img class="item-planning__icon" src="@img/planning/icons/icon_03.svg" alt="Icon 03">
+								<img class="item-planning__icon" src="img/planning/icons/icon_03.svg" alt="Icon 03">
 								<div class="item-planning__text">
 									<p>A dedicated Care Advocate</p>
 									<p>for every member</p>
 								</div>
 								<div class="item-planning__image-phone">
-									<img class="item-planning__image" src="@img/planning/phone_03.png" alt="Image phone_03">
+									<img class="item-planning__image" src="img/planning/phone_03.webp" alt="Image phone_03">
 								</div>
 							</div>
 						</div>
 						<div class="planning__item item-planning">
 							<div class="item-planning__wrapper">
-								<img class="item-planning__icon" src="@img/planning/icons/icon_04.svg" alt="Icon 04">
+								<img class="item-planning__icon" src="img/planning/icons/icon_04.svg" alt="Icon 04">
 								<div class="item-planning__text">
 									<p>A dedicated Care Advocate</p>
 									<p>for every member</p>
 								</div>
 								<div class="item-planning__image-phone">
-									<img class="item-planning__image" src="@img/planning/phone_04.png" alt="Image phone_04">
+									<img class="item-planning__image" src="img/planning/phone_04.webp" alt="Image phone_04">
 								</div>
 							</div>
 						</div>
@@ -305,7 +347,7 @@
 							<div data-watch data-watch-threshold="0.2" data-watch-once class="top-partners__items">
 								<div class="top-partners__item item-partner">
 									<a href="#" class="item-partner__body">
-										<img class="item-partner__image" src="@img/partners/icon_01.png" alt="Icon 01">
+										<img class="item-partner__image" src="img/partners/icon_01.webp" alt="Icon 01">
 										<h5 class="item-partner__title">for employers</h5>
 										<div class="item-partner__text">
 											<p>
@@ -316,7 +358,7 @@
 								</div>
 								<div class="top-partners__item item-partner">
 									<a href="#" class="item-partner__body">
-										<img class="item-partner__image" src="@img/partners/icon_02.png" alt="Icon 02">
+										<img class="item-partner__image" src="img/partners/icon_02.webp" alt="Icon 02">
 										<h5 class="item-partner__title">For Health Plans</h5>
 										<div class="item-partner__text">
 											<p>
@@ -327,7 +369,7 @@
 								</div>
 								<div class="top-partners__item item-partner">
 									<a href="#" class="item-partner__body">
-										<img class="item-partner__image" src="@img/partners/icon_03.png" alt="Icon 03">
+										<img class="item-partner__image" src="img/partners/icon_03.webp" alt="Icon 03">
 										<h5 class="item-partner__title">For Consultants</h5>
 										<div class="item-partner__text">
 											<p>
@@ -400,17 +442,17 @@
 						</div>
 					</div>
 					<div class="partners__picture">
-						<img src="@img/partners/main-image.png" alt="Image man and woman">
+						<img src="img/partners/main-image.webp" alt="Image man and woman">
 					</div>
 					<div data-watch data-watch-threshold="0.2" data-watch-once class="partners__images images-partners">
 						<div data-prlx class="images-partners__item images-partners__item_1">
-							<img src="@img/partners/vector.svg" alt="Image bacground">
+							<img src="img/partners/vector.svg" alt="Image bacground">
 						</div>
 						<div data-prlx class="images-partners__item images-partners__item_2">
-							<img src="@img/partners/vector.svg" alt="Image bacground">
+							<img src="img/partners/vector.svg" alt="Image bacground">
 						</div>
 						<div data-prlx class="images-partners__item images-partners__item_3">
-							<img src="@img/partners/vector.svg" alt="Image bacground">
+							<img src="img/partners/vector.svg" alt="Image bacground">
 						</div>
 					</div>
 				</div>
@@ -421,19 +463,19 @@
 					<div class="magazines__body">
 						<ul class="magazines__list">
 							<li class="magazines__item">
-								<img src="@img/magazines/image_01.svg" alt="Brand magazine TNY" class="magazines__image">
+								<img src="img/magazines/image_01.svg" alt="Brand magazine TNY" class="magazines__image">
 							</li>
 							<li class="magazines__item">
-								<img src="@img/magazines/image_02.svg" alt="Brand magazine Today" class="magazines__image">
+								<img src="img/magazines/image_02.svg" alt="Brand magazine Today" class="magazines__image">
 							</li>
 							<li class="magazines__item">
-								<img src="@img/magazines/image_03.svg" alt="Brand magazine Bloomberg" class="magazines__image">
+								<img src="img/magazines/image_03.svg" alt="Brand magazine Bloomberg" class="magazines__image">
 							</li>
 							<li class="magazines__item">
-								<img src="@img/magazines/image_04.svg" alt="Brand magazine Forbes" class="magazines__image">
+								<img src="img/magazines/image_04.svg" alt="Brand magazine Forbes" class="magazines__image">
 							</li>
 							<li class="magazines__item">
-								<img src="@img/magazines/image_05.svg" alt="Brand magazine Fast Company" class="magazines__image">
+								<img src="img/magazines/image_05.svg" alt="Brand magazine Fast Company" class="magazines__image">
 							</li>
 						</ul>
 					</div>
@@ -443,7 +485,7 @@
 				<div class="foundation__container">
 					<div class="foundation__body">
 						<div class="foundation__picture">
-							<img class="foundation__image" src="@img/foundation/image_1.jpg" alt="Image woman with child">
+							<img class="foundation__image" src="img/foundation/image_1.webp" alt="Image woman with child">
 						</div>
 						<div class="foundation__content">
 							<div class="foundation__inner">
@@ -459,7 +501,7 @@
 						</div>
 					</div>
 					<div class="foundation__vector">
-						<img data-prlx src="@img/foundation/vector.svg" alt="Image vector BG yellow">
+						<img data-prlx src="img/foundation/vector.svg" alt="Image vector BG yellow">
 					</div>
 				</div>
 			</section>
@@ -468,19 +510,19 @@
 					<h5 class="awards__sub-title">Our Awards</h5>
 					<ul class="awards__list">
 						<li class="awards__item">
-							<img src="@img/awards/image_01.png" alt="Image awards 01" class="awards__image">
+							<img src="img/awards/image_01.webp" alt="Image awards 01" class="awards__image">
 						</li>
 						<li class="awards__item">
-							<img src="@img/awards/image_02.png" alt="Image awards 02" class="awards__image">
+							<img src="img/awards/image_02.webp" alt="Image awards 02" class="awards__image">
 						</li>
 						<li class="awards__item">
-							<img src="@img/awards/image_03.png" alt="Image awards 03" class="awards__image">
+							<img src="img/awards/image_03.webp" alt="Image awards 03" class="awards__image">
 						</li>
 						<li class="awards__item">
-							<img src="@img/awards/image_04.png" alt="Image awards 04" class="awards__image">
+							<img src="img/awards/image_04.webp" alt="Image awards 04" class="awards__image">
 						</li>
 						<li class="awards__item">
-							<img src="@img/awards/image_05.png" alt="Image awards 05" class="awards__image">
+							<img src="img/awards/image_05.webp" alt="Image awards 05" class="awards__image">
 						</li>
 					</ul>
 				</div>
@@ -506,9 +548,139 @@
 				</div>
 			</section>
 		</main>
-		@@include('html/_footer.htm',{})
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__main main-footer">
+					<div class="main-footer__wrapper">
+						<div data-spollers="767.98,max" data-one-spoller class="main-footer__spollers spollers">
+							<details class="spollers__item">
+								<summary data-spoller-close class="spollers__title">For Business</summary>
+								<div class="spollers__body body-spollers">
+									<ul class="body-spollers__list">
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Employers</a>
+										</li>
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Health Plans</a>
+										</li>
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Consultants</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<details data-open class="spollers__item">
+								<summary data-spoller-close class="spollers__title">Join Maven</summary>
+								<div class="spollers__body body-spollers">
+									<ul class="body-spollers__list">
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Individuals</a>
+										</li>
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Become a Maven Provider</a>
+										</li>
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Join Our Community</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary data-spoller-close class="spollers__title">Resources</summary>
+								<div class="spollers__body body-spollers">
+									<ul class="body-spollers__list">
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Resource Center</a>
+										</li>
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Blog</a>
+										</li>
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">COVID-19</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary data-spoller-close class="spollers__title">Company</summary>
+								<div class="spollers__body body-spollers">
+									<ul class="body-spollers__list">
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">About</a>
+										</li>
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Press</a>
+										</li>
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Careers <span>We're hiring!</span></a>
+										</li>
+										<li class="body-spollers__item">
+											<a href="#" class="body-spollers__link">Contact</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+						</div>
+						<div class="main-footer__contacts">
+							<h4 class="main-footer__subtitle">Find us on</h4>
+							<div class="main-footer__social social-footer">
+								<ul class="social-footer__items">
+									<li class="social-footer__item">
+										<a href="#" class="social-footer__link _icon-s-linkedin">
+										</a>
+									</li>
+									<li class="social-footer__item">
+										<a href="#" class="social-footer__link _icon-s-facebook">
+										</a>
+									</li>
+									<li class="social-footer__item">
+										<a href="#" class="social-footer__link _icon-s-instagram">
+										</a>
+									</li>
+									<li class="social-footer__item">
+										<a href="#" class="social-footer__link _icon-s-twitter">
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="main-footer__store store-footer">
+								<ul class="store-footer__list">
+									<li class="store-footer__item">
+										<a href="#" class="store-footer__link">
+											<img class="store-footer__image" src="img/footer/app-store.svg" alt="Image App Store">
+										</a>
+									</li>
+									<li class="store-footer__item">
+										<a href="#" class="store-footer__link">
+											<img class="store-footer__image" src="img/footer/google-play.svg" alt="Image Google Play">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<div class="bottom-footer__wrapper">
+						<div class="bottom-footer__text">
+							<p>
+								© <time datetime="2021">2021</time> Maven, Inc. All rights reserved.
+							</p>
+						</div>
+						<div class="bottom-footer__terms">
+							<a href="#" class="bottom-footer__link">
+								Terms
+							</a>
+							<a href="#" class="bottom-footer__link">
+								Privacy
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
-	@@include('html/_js.htm',{})
+	<script src="js/app.min.js?_v=20241028115524"></script>
 </body>
 
 </html>
